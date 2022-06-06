@@ -3,7 +3,7 @@ import { inserirPet, listarPet} from '../repository/petRepository.js'
 import{Router} from 'express'
 const server = Router();
 
-server.post ('pet', async(req, resp) => {
+server.post ('/pet', async(req, resp) => {
     try{
         const novoPet = req.body;
         const petInserido = await inserirPet(novoPet);
@@ -16,7 +16,7 @@ server.post ('pet', async(req, resp) => {
     }
 })
 
-server.get ('pet/:id', async(req, resp) => {
+server.get ('/pet/:id', async(req, resp) => {
     try{
         const id = Number (req.params.id);
         const resposta = await buscarPorId(id)
