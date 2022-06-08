@@ -5,7 +5,7 @@ export async function inserirPet(pet){
     `INSERT INTO tb_pet(id_pet, nm_pet)
         VALUES(?,?)`;
     
-const [resposta = await con.query(comando, pet.nome )]
+const resposta = await con.query(comando, [pet.nome]);
 return resposta;
 }
 
