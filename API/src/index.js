@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import { con } from './repository/connection.js'
+import bruno from './controller/petController.js'
 
 import express from 'express'
 import cors from 'cors'
@@ -9,7 +10,7 @@ server.use(cors());
 server.use(express.json());
 
 
-
+server.use (bruno);
 
 
 server.listen(process.env.PORT, () => console.log(`API online na porta ${process.env.PORT})`));
