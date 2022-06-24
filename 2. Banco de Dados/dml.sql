@@ -5,5 +5,5 @@ INSERT INTO tb_pet(id_pet, nm_pet)
         
 
 SELECT  id_pet     id,
-		nm_pet     nome
-FROM tb_pet;
+	nm_pet     nome
+FROM    tb_pet;
