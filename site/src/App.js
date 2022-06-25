@@ -15,7 +15,6 @@ function App() {
   
   useEffect(()=> {
   carregarTodosPets();
-  
   }, [])
   
   async function salvarClick(){
