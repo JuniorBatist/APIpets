@@ -13,10 +13,11 @@ return pet;
 
 export async function listarPet() {
     const comando =
-    `SELECT  id_pet     id,
-         nm_pet     nome
-         FROM 	tb_pet`
+       `select id_pet      id,
+            nm_pet         nome
+        from tb_pet;
+    `
 
-const [resposta] = await con.query(comando);
-return resposta;
+const resposta = await con.query(comando);
+return resposta [0];
 }
