@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import './index.css'
 import { inserirPet, listarPet  } from './api/petpi'
 
 
@@ -30,7 +30,7 @@ function App() {
      <main >
       <h1>Cadastrar Pet</h1> 
       <br/>
-      <input type='text' placeholder='nome do pet' value={nome} onChange={e=> setNome(e.target.value)}/>
+      <input ClassName='Dig' type='text' placeholder='nome do pet' value={nome} onChange={e=> setNome(e.target.value)}/>
 
       <div>
           <button onClick={salvarClick}>Salvar</button>
